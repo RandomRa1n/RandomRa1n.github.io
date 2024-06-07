@@ -6,16 +6,24 @@ tags: [overview, moonwalk]
 ## 免责声明
 
 我不会HTML。
+
 Glory attributes to ChatGPT-4, bugs belong to me.
 
 ## Screenshot
 
 ![HLM](http://www.abhinavsaxena.com/images/abhinav.jpeg)
+
 ![Lorentz](http://www.abhinavsaxena.com/images/abhinav.jpeg)
 
-## 代码
+## Hotline Miami 2 Digital Clock
 
-### Hotline Miami 2 Digital Clock
+### Requirements
+
+字体：
+- DS-Digital，时钟字体
+- PixelMix，年月日与位置的字体
+
+### 代码
 
 ```html
 <!DOCTYPE html>   
