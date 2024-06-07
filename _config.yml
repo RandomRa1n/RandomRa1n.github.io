@@ -50,3 +50,18 @@ sass:
 plugins:
   - jekyll-feed
   - jekyll-soopr-seo-tag
+  - jekyll-toc
+
+# 添加目录
+toc:
+  # ID of the element where TOC will be inserted
+  toc_id: toc
+  # Tag of the TOC container element
+  toc_tag: nav
+  # CSS class of the TOC container element
+  toc_class: toc
+  # Minimum number of headings to include TOC
+  min_level: 2
+  # Maximum number of headings to include TOC
+  max_level: 6
+
