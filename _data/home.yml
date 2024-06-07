@@ -12,10 +12,11 @@ navbar_entries:
   #   url: https://www.abhinav.co
 
 project_entries:
-  - title: Folk Alchemy
+  - title: 动态壁纸.html
     url: overview-post
-    desc: 土法炼金，自己动手丰衣足食
-    highlight: NEW
+    desc: 使用Plash将网站设为桌面壁纸
+    highlight: Mac
+    highlight: New
 
   - title: Project 2
     url: overview-post
