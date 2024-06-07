@@ -5,25 +5,45 @@ tags: [overview, moonwalk]
 ---
 ## 免责声明
 
-我不会HTML。
+我不会html和Jacascript。
 
-Glory attributes to ChatGPT-4, bugs belong to me.
+~~Glory attributes to ChatGPT-4, bugs belong to me.~~
 
-## Screenshot
+## 这是什么？
+
+### 关于Plash
+
+### 那么我该如何应用呢？
+
+## 实测截图
+
+### Hotline Miami 2 Digital Clock
+
+仿造Hotline Miami 2的电子钟。为了塑造发癫的效果给时间加上了晃动效果。
+
+设计过程部分参考了Wallpaper Engine的 Hotline Miami: Clock[^1]。
+
+位置（MIAMI, FLORIDA）可通过修改代码改变。
 
 ![HLM](http://www.abhinavsaxena.com/images/abhinav.jpeg)
 
+### Lorentz Attractor (Rainbow)
+
+随机生成一个固定视角的洛伦兹吸引子，并展示该洛伦兹系统的轨迹。速度越大，线段的颜色越接近彩虹的红色，反之亦然。
+
 ![Lorentz](http://www.abhinavsaxena.com/images/abhinav.jpeg)
 
-## Hotline Miami 2 Digital Clock
+## 需求与代码实现
 
-### Requirements
+### Hotline Miami 2 Digital Clock
+
+#### Requirements
 
 字体：
 - DS-Digital，时钟字体
-- PixelMix，年月日与位置的字体
+- PixelMix，年月日与位置的字体。无法做到游戏的完全还原，这个是我找到最接近的。
 
-### 代码
+#### 代码
 
 ```html
 <!DOCTYPE html>   
@@ -175,7 +195,7 @@ updateClock(); // Initialize clock immediately
 
 ```
 
-### Lorentx Attractor
+
 
 
 Lorem ipsum[^1] dolor sit amet, consectetur adipiscing elit. Pellentesque vel lacinia neque. Praesent nulla quam, ullamcorper in sollicitudin ac, molestie sed justo. Cras aliquam, sapien id consectetur accumsan, augue magna faucibus ex, ut ultricies turpis tortor vel ante. In at rutrum tellus.
@@ -249,7 +269,7 @@ Now a table:
 ---
 {: data-content="footnotes"}
 
-[^1]: this is a footnote. You should reach here if you click on the corresponding superscript number.
+[^1]: https://steamcommunity.com/sharedfiles/filedetails/?id=2445595824.
 [^2]: hey there, don't forget to read all the footnotes!
 [^3]: this is another footnote.
 [^4]: this is a very very long footnote to test if a very very long footnote brings some problems or not; hope that there are no problems but you know sometimes problems arise from nowhere.
