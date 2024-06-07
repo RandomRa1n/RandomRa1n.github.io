@@ -5,15 +5,27 @@ tags: [网页，动态壁纸, html, css]
 ---
 ## 免责声明
 
+
 我不会html和Jacascript。~~Glory attributes to ChatGPT-4, bugs belong to me.~~
 
-## 目录
-* toc
-{:toc}
+<div class="toc">
+<h2>Table of Contents</h2>
+<ul>
+  <li><a href="1">这是什么？</a></li>
+  <li><a href="2">下载链接</a></li>
+  <li><a href="3">需求与代码实现</a></li>
+</ul>
+</div>
 
-## 这是什么？
+## 这是什么？{#1}
 
-### 关于Plash
+自制怪网页，通过Plash实现将网页设为壁纸的功能，使得mac也有动态壁纸用。
+
+目前做了2个网页：
+- Hotline Miami 2 Digital Clock
+- Lorentz Attractor (Rainbow)
+
+### 关于Plash 
 
 [Plash: Make any website your Mac desktop wallpaper](https://github.com/sindresorhus/Plash) 
 
@@ -25,7 +37,7 @@ tags: [网页，动态壁纸, html, css]
 - 确保“网页”至少是一个包含index.html的文件夹。
 - 打开Plash，点顶部菜单的图标，点“Add Website...”，右下角有“Local Website”的选项。点开后选择你希望的网页文件夹。
 
-## 实测截图
+## 下载链接 {#2}
 
 #### Hotline Miami 2 Digital Clock
 
@@ -39,7 +51,7 @@ tags: [网页，动态壁纸, html, css]
 
 ![Lorentz](assets/weird-webpage/Lorentz_Attractor_rainbow.png)
 
-## 需求与代码实现
+## 需求与代码实现 {#3}
 
 ### Hotline Miami 2 Digital Clock
 
