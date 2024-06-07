@@ -69,7 +69,7 @@ tags: [网页，动态壁纸, html, css]
 - 下载[three.min.js](https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js)文件
 - 将下载的 `three.min.js` 文件放入与 index.html 和 app.js 相同的目录中。
 - 更新 index.html 文件以引用本地的 `three.min.js` 文件, 如下所示：
-  ```html
+```html
   <!DOCTYPE html>
 <html>
 <head>
