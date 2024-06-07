@@ -27,25 +27,27 @@ tags: [网页，动态壁纸, html, css]
 
 ## 实测截图
 
-### Hotline Miami 2 Digital Clock
+#### Hotline Miami 2 Digital Clock
 
-仿造Hotline Miami 2的电子钟。为了塑造发癫的效果给时间加上了晃动效果。
+[Download](assets/weird-webpage/HLM2_clock.zip)
 
-设计过程部分参考了Wallpaper Engine的 Hotline Miami: Clock[^1]。
+![HLM](assets/weird-webpage/HLM2_clock.png)
 
-位置（MIAMI, FLORIDA）可通过修改代码改变。
+#### Lorentz Attractor (Rainbow)
 
-![HLM](http://www.abhinavsaxena.com/images/abhinav.jpeg)
+[Download](assets/weird-webpage/Lorentz_Attractor_rainbow.zip)
 
-### Lorentz Attractor (Rainbow)
-
-随机生成一个固定视角的洛伦兹吸引子，并展示该洛伦兹系统的轨迹。速度越大，线段的颜色越接近彩虹的红色，反之亦然。
-
-![Lorentz](http://www.abhinavsaxena.com/images/abhinav.jpeg)
+![Lorentz](assets/weird-webpage/Lorentz_Attractor_rainbow.png)
 
 ## 需求与代码实现
 
 ### Hotline Miami 2 Digital Clock
+
+#### 说明
+
+仿造Hotline Miami 2的电子钟。为了塑造发癫的效果给时间加上了晃动效果。设计过程部分参考了Wallpaper Engine的 Hotline Miami: Clock[^1]。
+
+位置（MIAMI, FLORIDA）可通过修改代码改变。
 
 #### Requirements
 
@@ -205,7 +207,9 @@ updateClock(); // Initialize clock immediately
 
 ```
 
+### Lorentz Attractor (Rainbow)
 
+随机生成一个固定视角的洛伦兹吸引子，并展示该洛伦兹系统的轨迹。速度越大，线段的颜色越接近彩虹的红色，反之亦然。
 
 
 Lorem ipsum[^1] dolor sit amet, consectetur adipiscing elit. Pellentesque vel lacinia neque. Praesent nulla quam, ullamcorper in sollicitudin ac, molestie sed justo. Cras aliquam, sapien id consectetur accumsan, augue magna faucibus ex, ut ultricies turpis tortor vel ante. In at rutrum tellus.
