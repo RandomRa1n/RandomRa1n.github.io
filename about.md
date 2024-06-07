@@ -1,8 +1,13 @@
 ---
 layout: post
-title: About
+title: About 
 ---
 
-This is an example page!
+# 关于网站
 
-Actually, it has the same layout of a post...
+用来存一些奇怪的小项目
+
+# 网站主题版权
+
+© 2024 Abhinav Saxena   •  Powered by Soopr   •  Theme  Moonwalk
+
