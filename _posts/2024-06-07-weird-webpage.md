@@ -8,16 +8,8 @@ tags: [网页，动态壁纸, html, css]
 
 我不会html和Jacascript。~~Glory attributes to ChatGPT-4, bugs belong to me.~~
 
-<div class="toc">
-<h2>Table of Contents</h2>
-<ul>
-  <li><a href="1">这是什么？</a></li>
-  <li><a href="2">下载链接</a></li>
-  <li><a href="3">需求与代码实现</a></li>
-</ul>
-</div>
 
-## 这是什么？{#1}
+## 这是什么？
 
 自制怪网页，通过Plash实现将网页设为壁纸的功能，使得mac也有动态壁纸用。
 
@@ -37,194 +29,71 @@ tags: [网页，动态壁纸, html, css]
 - 确保“网页”至少是一个包含index.html的文件夹。
 - 打开Plash，点顶部菜单的图标，点“Add Website...”，右下角有“Local Website”的选项。点开后选择你希望的网页文件夹。
 
-## 下载链接 {#2}
-
-#### Hotline Miami 2 Digital Clock
-
-[Download](assets/weird-webpage/HLM2_clock.zip)
-
-![HLM](assets/weird-webpage/HLM2_clock.png)
-
-#### Lorentz Attractor (Rainbow)
-
-[Download](assets/weird-webpage/Lorentz_Attractor_rainbow.zip)
-
-![Lorentz](assets/weird-webpage/Lorentz_Attractor_rainbow.png)
-
-## 需求与代码实现 {#3}
+## 下载须知
 
 ### Hotline Miami 2 Digital Clock
 
 #### 说明
 
-仿造Hotline Miami 2的电子钟。为了塑造发癫的效果给时间加上了晃动效果。设计过程部分参考了Wallpaper Engine的 Hotline Miami: Clock[^1]。
+仿造Hotline Miami 2的电子钟。为塑造发癫效果加上了晃动效果。设计过程部分参考了Wallpaper Engine的 [Hotline Miami: Clock](https://steamcommunity.com/sharedfiles/filedetails/?id=2445595824)。
 
-位置（MIAMI, FLORIDA）可通过修改代码改变。
+位置默认 MIAMI, FLORIDA，可通过修改代码第136行改变。
+```html
+    <div>MIAMI,  FLORIDA</div> <!-- Replace with your actual location --> 
+```
 
-#### Requirements
+#### 需求
 
 字体：
 - DS-Digital，时钟字体
 - PixelMix，年月日与位置的字体。无法做到游戏的完全还原，这个是我找到最接近的。
 
-#### 代码
+#### 下载与效果预览
 
-```html
-<!DOCTYPE html>   
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hotline Miami 2 Digital Clock</title>
+[Download](assets/weird-webpage/HLM2_clock.zip)
 
-<style> 
-  body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: black;
-    font-family: 'Courier New', monospace;
-    overflow: hidden;
-  }
+![HLM](assets/weird-webpage/HLM2_clock.png)
 
-  .container {
-    text-align: center;
-    animation: sway 5s ease-in-out infinite;
-  }
-
-  @keyframes sway {
-  0% {
-    transform: translate(-5px, -5px);
-  }
-  10% {
-    transform: translate(5px, 5px);
-  }
-  20% {
-    transform: translate(-5px, 5px);
-  }
-  30% {
-    transform: translate(5px, -5px);
-  }
-  40% {
-    transform: translate(0px, 5px);
-  }
-  50% {
-    transform: translate(-5px, 0px);
-  }
-  60% {
-    transform: translate(5px, 5px);
-  }
-  70% {
-    transform: translate(-5px, -5px);
-  }
-  80% {
-    transform: translate(5px, 0px);
-  }
-  90% {
-    transform: translate(0px, -5px);
-  }
-  100% {
-    transform: translate(0px, 5px); 
-  }
-}
-.container {
-  animation: sway 30s ease-in-out infinite;
-}
-
-
-  .clock {
-    font-size: 100px;
-
-    color: red;
-    font-family: 'DS-Digital', monospace;
-    margin-bottom: -15px;
-    text-shadow: 2px 2px 0px darkred;
-  }
-
-  .date-location {
-    color: white;
-    font-family: 'pixelmix', monospace;
-    font-size: 20px;
-    text-shadow: 2px -2px 0px #999999;
-  }
-  .date-location div {
-  margin-bottom: 5px; /* Adjust the bottom margin as needed */
-  }
-
-  .divider {
-    position: relative; /* Needed for absolute positioning of the pseudo-element */
-    height: 2px;
-    background-color: white !important;
-    margin: 10px auto;
-    width: 200px; /* Initial size, can be adjusted */
-    z-index: 2;
-  }
-
-  .divider::after {
-    content: ''; /* Necessary for the pseudo-element to work */
-    position: absolute; /* Position relative to the .divider */
-    right: -2px; /* Shifts the grey line to the right */
-    bottom: -2px; /* Shifts the grey line to the bottom */
-    background-color: #999999; /* Sets the grey line color */
-    width: 100%; /* Same width as the white line */
-    height: 2px; /* Same height as the white line */
-    z-index: 1; /* Ensures the grey line is behind the white line */
-  }
-
-  .colon {
-    visibility: hidden;
-  }
-</style>
-</head>
-<body>
-<div class="container">
-  <div id="clock" class="clock"></div>
-  <div class="divider"></div>
-  <div id="date-location" class="date-location"></div>
-</div>
-<script>
-function updateClock() {
-  const locale = 'en-US'; // Define the locale
-  const now = new Date();
-  const hour = now.getHours().toString().padStart(2, '0');
-  const minute = now.getMinutes().toString().padStart(2, '0');
-
-  // Formatting the date as "Month abbreviation day, year"
-  const dateOptions = { year: 'numeric', month: 'short', day: 'numeric' };
-  let formattedDate = now.toLocaleDateString(locale, dateOptions);
-
-  // Convert the month abbreviation to uppercase
-  formattedDate = formattedDate.replace(/([a-zA-Z]+)\s(\d{1,2}),\s(\d{4})/, (match, p1, p2, p3) => {
-    return `${p1.toUpperCase()} ${p2}, ${p3}`;
-  });
-
-  // Toggle colon visibility
-  const colonVisibility = now.getSeconds() % 2 === 0 ? 'visible' : 'hidden';
-
-  // Update the HTML content
-  document.getElementById('clock').innerHTML = `${hour}<span class="colon" style="visibility:${colonVisibility}">:</span>${minute}`;
-  document.getElementById('date-location').innerHTML = `
-    <div>${formattedDate}</div>
-    <div>TOKYO,  JAPAN</div> <!-- Replace with your actual location -->
-  `;
-}
- 
-setInterval(updateClock, 1000); // Update the clock every second
-updateClock(); // Initialize clock immediately
- 
-</script>
-</body>
-</html>
-
-```
 
 ### Lorentz Attractor (Rainbow)
 
+#### 说明
+
 随机生成一个固定视角的洛伦兹吸引子，并展示该洛伦兹系统的轨迹。速度越大，线段的颜色越接近彩虹的红色，反之亦然。
 
+#### 需求
 
-Lorem ipsum[^1] dolor sit amet, consectetur adipiscing elit. Pellentesque vel lacinia neque. Praesent nulla quam, ullamcorper in sollicitudin ac, molestie sed justo. Cras aliquam, sapien id consectetur accumsan, augue magna faucibus ex, ut ultricies turpis tortor vel ante. In at rutrum tellus.
+运行时需要互联网连接。原因是代码中引用了`three.min.js`的 CDN 链接.
+
+如果想在没有互联网连接的情况下运行，可以下载`three.min.js`并在本地引用它:
+- 下载[three.min.js](https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js)文件
+- 将下载的 `three.min.js` 文件放入与 index.html 和 app.js 相同的目录中。
+- 更新 index.html 文件以引用本地的 `three.min.js` 文件, 如下所示：
+  ```html
+  <!DOCTYPE html>
+<html>
+<head>
+    <title>Lorentz Attractor</title>
+    <style>
+        body { margin: 0; }
+        canvas { width: 100%; height: 100% }
+    </style>
+</head>
+<body>
+    <script src="three.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
+  ```
+
+
+#### 下载与效果预览
+
+[Download](assets/weird-webpage/Lorentz_Attractor_rainbow.zip)
+
+![Lorentz](assets/weird-webpage/Lorentz_Attractor_rainbow.png)
+
+
 
 # Sample heading 1
 ## Sample heading 2
@@ -233,7 +102,6 @@ Lorem ipsum[^1] dolor sit amet, consectetur adipiscing elit. Pellentesque vel la
 ##### Sample heading 5
 ###### Sample heading 6
 
-Mauris viverra dictum ultricies. Vestibulum quis ipsum euismod, facilisis metus sed, varius ipsum. Donec scelerisque lacus libero, eu dignissim sem venenatis at. Etiam id nisl ut lorem gravida euismod.
 
 ## Lists
 
@@ -295,7 +163,7 @@ Now a table:
 ---
 {: data-content="footnotes"}
 
-[^1]: https://steamcommunity.com/sharedfiles/filedetails/?id=2445595824.
+
 [^2]: hey there, don't forget to read all the footnotes!
 [^3]: this is another footnote.
 [^4]: this is a very very long footnote to test if a very very long footnote brings some problems or not; hope that there are no problems but you know sometimes problems arise from nowhere.
