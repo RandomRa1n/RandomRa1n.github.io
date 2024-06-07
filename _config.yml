@@ -2,7 +2,7 @@ title: RandomRa1n
 author: RandomRa1n
 # url: https://www.abhinavsaxena.com/moonwalk # root address of the site
 description: > # description of the site (multiple lines allowed)
-  摸鱼站点，放点小项目。
+  摸鱼站点，放点土法炼金的小项目。
 
 permalink: /:slug
 
@@ -34,7 +34,7 @@ theme_config:
   
   # options for "home" page
   home:
-    title_projects: Projects
+    title_projects: Folk Alchemy Projects
     # title_misc_list: Details
     title_blog: Blog
     title_old_projects: Archive
