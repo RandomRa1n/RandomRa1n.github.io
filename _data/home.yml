@@ -12,11 +12,10 @@ navbar_entries:
   #   url: https://www.abhinav.co
 
 project_entries:
-  - title: 动态壁纸.html
+  - title: 设网页为动态壁纸
     url: overview-post
-    desc: 使用Plash将网站设为桌面壁纸
+    desc: 自制怪网页，使用Plash设其为动态壁纸
     highlight: Mac
-    highlight: New
 
   - title: Project 2
     url: overview-post
