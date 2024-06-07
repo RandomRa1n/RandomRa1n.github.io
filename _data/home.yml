@@ -13,7 +13,7 @@ navbar_entries:
 
 project_entries:
   - title: 设网页为动态壁纸
-    url: overview-post
+    url: weird-webpage
     desc: 自制怪网页，使用Plash设其为动态壁纸
     highlight: Mac
 
