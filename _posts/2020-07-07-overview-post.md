@@ -1,7 +1,7 @@
 ---
 layout: post
 author: Abhinav Saxena
-tags: [overview, moonwalk]
+tags: [html, 动态壁纸, css]
 ---
 ## 免责声明
 
@@ -13,7 +13,15 @@ tags: [overview, moonwalk]
 
 ### 关于Plash
 
-### 那么我该如何应用呢？
+[Plash: Make any website your Mac desktop wallpaper](https://github.com/sindresorhus/Plash) 
+
+一个将网站设为壁纸的app，仅限Mac OS。*可以显示本地网站*，可以将自定义 CSS 和 JavaScript 添加到网站。这就给了我们手搓动态壁纸的机会。
+
+### 那么该怎么用呢？
+
+- 下载我做的网页，或自己做一个！
+- 确保“网页”至少是一个包含index.html的文件夹。
+- 打开Plash，点顶部菜单的图标，点“Add Website...”，右下角有“Local Website”的选项。点开后选择你希望的网页文件夹。
 
 ## 实测截图
 
