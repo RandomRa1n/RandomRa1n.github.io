@@ -7,6 +7,10 @@ tags: [网页，动态壁纸, html, css]
 
 我不会html和Jacascript。~~Glory attributes to ChatGPT-4, bugs belong to me.~~
 
+## 目录
+* toc
+{:toc}
+
 ## 这是什么？
 
 ### 关于Plash
