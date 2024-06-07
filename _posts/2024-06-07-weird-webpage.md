@@ -63,14 +63,15 @@ tags: [网页，动态壁纸, html, css]
 
 #### 需求
 
-运行时需要互联网连接。原因是代码中引用了`three.min.js`的 CDN 链接.
+*运行时需要互联网连接*。原因是代码中引用了`three.min.js`的 CDN 链接.
 
 如果想在没有互联网连接的情况下运行，可以下载`three.min.js`并在本地引用它:
-- 下载[three.min.js](https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js)文件
+- 下载[three.min.js](https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js)文件。
 - 将下载的 `three.min.js` 文件放入与 index.html 和 app.js 相同的目录中。
 - 更新 index.html 文件以引用本地的 `three.min.js` 文件, 如下所示：
+  
 ```html
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <title>Lorentz Attractor</title>
