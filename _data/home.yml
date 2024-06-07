@@ -22,7 +22,7 @@ project_entries:
     desc: Projects are shown in card layout
 
   - title: Project 3
-    url: overview-post
+    url: sooper
     desc: You can control visibility from _config.yml file
 
   - title: Project 4
