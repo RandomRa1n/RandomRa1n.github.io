@@ -1,13 +1,11 @@
 ---
 layout: post
 author: Abhinav Saxena
-tags: [html, 动态壁纸, css]
+tags: [网页，动态壁纸, html, css]
 ---
 ## 免责声明
 
-我不会html和Jacascript。
-
-~~Glory attributes to ChatGPT-4, bugs belong to me.~~
+我不会html和Jacascript。~~Glory attributes to ChatGPT-4, bugs belong to me.~~
 
 ## 这是什么？
 
